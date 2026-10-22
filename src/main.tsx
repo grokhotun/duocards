@@ -9,7 +9,7 @@ import { LanguageProvider } from "@/lib/language.tsx"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/duocards">
       <ThemeProvider>
         <LanguageProvider>
           <App />
