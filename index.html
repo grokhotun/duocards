@@ -1,10 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="/duocards/icon-192.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>vite-app</title>
+    <title>Duocards</title>
+    <script>
+      ;(function () {
+        var p = window.location.search.match(/[?&]p=([^&]*)/)
+        var h = window.location.search.match(/[?&]h=([^&]*)/)
+        if (p) {
+          window.history.replaceState(
+            null,
+            null,
+            "/duocards" +
+              decodeURIComponent(p[1]) +
+              (h ? decodeURIComponent(h[1]) : "")
+          )
+        }
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>

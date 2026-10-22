@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      var path = window.location.pathname
+      var search = window.location.search
+      var hash = window.location.hash
+      var redirect =
+        "/duocards/?p=" +
+        encodeURIComponent(path.slice("/duocards".length) + search) +
+        (hash ? "&h=" + encodeURIComponent(hash) : "")
+      window.location.replace(redirect)
+    </script>
+  </head>
+</html>
